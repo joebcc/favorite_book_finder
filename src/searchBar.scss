@@ -1,0 +1,75 @@
+@import 'variables';
+
+.bookfinder {
+    &-search {
+        grid-area: search;
+        max-width: $containerWidth;
+        text-align: left;
+        border-radius: $roundedCorners;
+        overflow: hidden;
+        transition: $transition;
+    
+        &:focus-within,
+        &.has-input
+        {
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,.25);
+            
+        }
+    }
+    
+    &-results-popup {
+        transition: $transition;
+    }
+}
+
+.search-bar {
+    font-size:1.2rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: $gray;
+    outline: none;
+    border: none;
+    transition: $transition;
+    
+    &:focus-within{
+      background-color: white;
+    }
+  }
+  
+  .popup-list {
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  .popup-subtitle {
+    background: $gray;
+    color: $darkGray;
+    font-size: .75rem;
+    padding: 1rem 1rem;
+    text-transform: uppercase;
+  }
+  .popup-result {
+    list-style: none;
+    padding: .75rem 1rem;
+    transition: $transition;
+
+    &:hover {
+        background: $purple;
+        color: white;
+        cursor: pointer;
+        padding-left: 1.75rem;
+
+    }
+  }
+  .result-title {
+    font-size: 1rem;
+  }
+  .result-subtitle {
+    margin-top: .25rem;
+    font-size: .75rem;
+    opacity: .5;
+  }
+  .results-no-matches {
+    text-align: center;
+    padding: 4rem 1rem;
+    opacity: .35;
+  }
